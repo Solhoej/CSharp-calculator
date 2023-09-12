@@ -12,7 +12,7 @@
                 float num1 = float.Parse(Console.ReadLine());
                 Console.WriteLine("Enter second number");
                 float num2 = float.Parse(Console.ReadLine());
-                Console.WriteLine("Enter operator: (+, -, *, /)");
+                Console.WriteLine("Enter operator: (+, -, *, /, ^)");
                 string operation = Console.ReadLine();
 
                 switch (operation)
@@ -32,6 +32,10 @@
                     case "/":
                         result = num1 / num2;
                         Console.WriteLine("Divition: " + result);
+                        break;
+                    case "^":
+                        result = (float)Math.Pow(num1, num2);
+                        Console.WriteLine("Exponent: " + result);
                         break;
                     default:
                         Console.WriteLine("Enter valid number");
